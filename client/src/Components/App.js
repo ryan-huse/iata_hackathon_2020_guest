@@ -10,6 +10,8 @@ import Tracking from "./Tracking";
 import NotFound from "./NotFound";
 import Logout from "./Logout";
 import Header from "./Header";
+import Login from "./Login";
+import Home from "./Home";
 
 
 library.add(fab, faHome, faMapMarker, faSignOutAlt)
@@ -39,14 +41,17 @@ class App extends Component {
             <Route path="/tracking" component={Tracking} />
             <Route path="/checkpoint" component={Checkpoint} />
             <Route path="/logout" component={Logout} />
+            <Route path="/login" component={Login} />
+            <Route path="/home" component={Home} />
             <Route component={NotFound} />
+
           </Switch> 
 
           <div id="footer">
             <ul className="nav-list">
               <div>
                 <FontAwesomeIcon icon={faHome} />
-                <li className="nav-item"> <Link to="/">Home</Link> </li>
+                <li className="nav-item"> <Link to="/home">Home</Link> </li>
               </div>
               <div>
                <FontAwesomeIcon icon={faMapMarker} />
