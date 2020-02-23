@@ -5,33 +5,36 @@
 
 .tracking { 
   width: 100%;
-  height: 75%;
+  height: 80%;
 }
 .tracking-point {
-  height: 25%;
+  height: 15%;
   display: flex;
-  justify-content: center;
-  padding: 10px;
+  margin-left: 20px;
+  padding: 20px;
+  color: #01416D;
 }
 
 .tracking hr {
-  width: 70%;
+  width: 60%;
   border-top: 1px solid #B0D786;
-  margin-left: 70px; 
+  margin-left: 70px;
 }
 
 #tracking-title {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .track-title {
-  background-color: #01B1D7;
+  background-color: #01B1D7; 
 }
 
 .tracking p {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .track-title p {
@@ -48,11 +51,6 @@
   /* vertical-align: middle; */
 }
 
-.verticalLine {
-  border-left: thick solid #B0D786;
-  height: 200px;
-}
-
 .main-details, .verticalLine {
   display:inline;
 }
@@ -67,3 +65,20 @@
   width: 80 px;
   margin-left: 10px;
 }
+
+.timeline img {
+  position: relative;
+  height: 300px;
+  width: 80 px;
+  margin-left: 5px;
+  float: left;
+  padding-top: 6%;
+}
+
+.gear img {
+  float: right;
+}
+
+
+
+
