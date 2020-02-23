@@ -12,7 +12,7 @@
         margin-top: 0px;
         margin-bottom: 0px;
         margin-left: 20px;
-        padding-top: 5px;
+        padding-top: 0px;
         padding-bottom: 5px;
       }
       
@@ -26,41 +26,70 @@
       
       .home-title p {
         color: white;
-        font-size: 15px;
+        font-size: 20px;
       }
 
       .home h1 {
-        font-size: 20px;
+        font-size: 15px;
         float: left;
-        height: 30px;
-        padding-left: 15px;
+        height: 28px;
+        padding-left: 20px;
         width: 50%;
+        padding-top: 2.5px;
+        padding-bottom: -3px;
 
       }
 
       .home h2{
         font-size: 15px;  
         float: right;
-        height: 30px;
-        width: 40%;
+        height: 15px;
+        width: 43%;
+        padding-top: 5px;
+        padding-bottom: -5px;
         
 
        }
       .home hr {
-        width: 80%;
+        width: 90%;
         border-top: 1px solid #B0D786;
+        margin-left: 10px;
+        
       }
 
-      #homebase-title2 {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        background-color: #01B1D7; 
+.home-title2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #01B1D7; 
+}
+
+.edit { 
+  padding-left: 50px;
+    margin-right: unset;
+}
+
+.home-title2 p{
+  padding-left: 15px;
+  font-size: 18px;
+  color: white;
+  padding-top: 5px; 
+}
+
+
+      .home h3{
+        font-size: 15px;  
+        float: left;
+        height: 28px;
+        width: 40%;
+        padding-left: 50px;
       }
-      .home-title2 p {
-        color: white;
-        font-size: 15px;
-        padding-left: 20px;
-      }
+
+        .home h4{
+            font-size: 15px;  
+            float: right;
+            height: 25px;
+            width: 43%;
+            padding-top: 1.5px;
+
+        }
