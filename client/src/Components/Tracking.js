@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { Component } from "react";
-=======
 import React, { Component, Fragment } from "react";
->>>>>>> 6828efe343809f47efc3efb0ce348aa9634f2ffd
 import Checkpoint from "./Checkpoint";
 import "../Css/Tracking.css";
 import image from "../Images/sample.png";
