@@ -53,7 +53,7 @@ app.get("/api/hello", async (req, res) => {
       console.log(`Blob ${i++}: ${blob.name}`);
     }
   }
-  var promises = imageNames.map(async (element, index) => {
+  var promises = imageNames.map(async element => {
     let blobClient = containerClient.getBlobClient(element);
     // Get blob content from position 0 to the end
     // In Node.js, get downloaded data by accessing downloadBlockBlobResponse.readableStreamBody
