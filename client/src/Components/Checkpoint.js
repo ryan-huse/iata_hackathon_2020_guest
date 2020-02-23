@@ -3,20 +3,20 @@ import '../Css/Checkpoint.css';
 
 const Checkpoint = () => (
   <div className="checkpoint">
-    <div className="inner-checkpoint">
 
-      <h2 id="checkpoint-title"> Verification Picture </h2>
+    <div className="track-title">
+      <p id="tracking-title"> Verification Pictures </p>
+    </div>
 
-      <div className="checkpoint-details">
-        <p>Agent's ID: </p>
-        <p>Location: </p>
-        <p>Timestamp: </p>
-        <p>Date: </p>
-      </div>
+    <div className="checkpoint-details">
+      <h4>Atlanta airport</h4>
+      <p>Airline: Delta</p>
+      <p>Date: February 26, 2020</p>
+      <p>Timestamp: 10:00 AM</p>
+    </div>
 
-      <div className="photos">
-        Images here
-      </div>
+    <div className="photos">
+      Images here
     </div>
     
     <div className="checkpoint-links">
