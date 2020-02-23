@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Checkpoint from './Checkpoint';
 import '../Css/Tracking.css';
 import image from '../Images/sample.png';
+import image2 from '../Images/Timeline.png';
 
 const Tracking = () => (
   <div className="tracking">
@@ -9,9 +10,11 @@ const Tracking = () => (
       <p id="tracking-title"> Tracking: 123456 </p>
     </div>
 
-    <div className="verticalLine">
-      some icon
-    </div>
+    <div className="timeline">
+          <a href="/checkpoint">
+            <img src={image2} alt="sample photo" />
+          </a>
+        </div>
 
     <div className="main-details">
       <div className="tracking-point">
@@ -19,7 +22,7 @@ const Tracking = () => (
           <h4>Atlanta airport</h4>
           <p>Airline: Delta</p>
           <p>Date: February 26, 2020</p>
-          <p>Timestamp: 10:00 AM EST</p>
+          <p>Timestamp: 10:00 AM</p>
         </div>
         <div className="photo">
           <a href="/checkpoint">
@@ -34,7 +37,7 @@ const Tracking = () => (
           <h4>Seattle airport</h4>
           <p>Airline: Delta</p>
           <p>Date: February 26, 2020</p>
-          <p>Timestamp: 1:20 PM EST</p>
+          <p>Timestamp: 1:20 PM</p>
         </div>
         <div className="photo">
         <div className="photo">
@@ -46,10 +49,11 @@ const Tracking = () => (
       </div>
       <hr></hr>
       <div className="tracking-point">
-        Arrived! Go to Baggage Counter 6.
+       <h4> Arrived! Go to Baggage Claim 6.</h4>
       </div>
     </div>
   </div>
+  
 )
 
 export default Tracking;

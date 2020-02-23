@@ -9,6 +9,8 @@ import Checkpoint from "./Checkpoint";
 import Tracking from "./Tracking";
 import NotFound from "./NotFound";
 import Logout from "./Logout";
+import Header from "./Header";
+
 
 library.add(fab, faHome, faMapMarker, faSignOutAlt)
 
@@ -30,10 +32,9 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
-          <div className="header">
-            <h2>WheelTrack</h2>
-          </div>
 
+        <Header/>
+      
           <Switch>
             <Route path="/tracking" component={Tracking} />
             <Route path="/checkpoint" component={Checkpoint} />
@@ -48,7 +49,7 @@ class App extends Component {
                 <li className="nav-item"> <Link to="/">Home</Link> </li>
               </div>
               <div>
-                <FontAwesomeIcon icon={faMapMarker} />
+               <FontAwesomeIcon icon={faMapMarker} />
                 <li className="nav-item"> <Link to="/tracking">Track</Link> </li>
               </div>
               <div>
