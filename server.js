@@ -64,6 +64,7 @@ app.get("/api/hello", async (req, res) => {
     );
     return {
       data: downloaded,
+      date: element.replace(req.query.barcodeID + "/", ""),
       metadata: {
         airline: metadata.airline,
         airport: metadata.airport

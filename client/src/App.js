@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 
 import logo from "./logo.svg";
 
@@ -8,34 +8,24 @@ class App extends Component {
   state = {
     response: "",
     post: "",
-    responseToPost: ""
+    responseToPost: []
   };
 
-  componentDidMount() {
-    this.callApi()
-      .then(res => this.setState({ response: res.express }))
-      .catch(err => console.log(err));
-  }
-
-  callApi = async () => {
-    const response = await fetch("/api/hello").catch(err => console.log(err));
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
-    console.log(body);
-    return body;
-  };
+  // componentDidMount() {
+  //   // this.callApi()
+  //   //   .then(res => this.setState({ response: res.express }))
+  //   //   .catch(err => console.log(err));
+  // }
 
   handleSubmit = async e => {
     e.preventDefault();
-    const response = await fetch("/api/world", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ post: this.state.post })
-    });
-    const body = await response.text();
-
+    const response = await fetch(
+      `/api/hello?barcodeID=${this.state.post}`
+    ).catch(err => console.log(err));
+    const body = await response.json();
+    if (response.status !== 200) throw Error(body.message);
+    var stuff = [];
+    stuff.push(body);
     this.setState({ responseToPost: body });
   };
 
@@ -68,7 +58,14 @@ class App extends Component {
           />
           <button type="submit">Submit</button>
         </form>
-        <p>{this.state.responseToPost}</p>
+
+        {this.state.responseToPost.map((element, index) => (
+          <Fragment>
+            <p>{new Date(element.date).toLocaleString()}</p>
+            <p>Airline: {element.metadata.airline}</p>
+            <p>Airport: {element.metadata.airport}</p>
+          </Fragment>
+        ))}
       </div>
     );
   }
