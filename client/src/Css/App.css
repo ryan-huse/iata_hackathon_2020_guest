@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #007DC0;
+  margin-bottom: 15px;
+  height: 10%;
+}
+
+.header h2 {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.nav-list {
+  height: 80px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  background-color: #01416D;
+}
+
+.nav-item {
+  margin: auto 1.5em;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
