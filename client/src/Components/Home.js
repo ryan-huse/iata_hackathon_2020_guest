@@ -1,5 +1,6 @@
 import React from 'react';
 import '../Css/Home.css';
+import image from '../Images/Edit_button.png';
 
 const Home = () => (
 
@@ -24,10 +25,27 @@ const Home = () => (
     <h1>Time of Departure:</h1>   <h2> 10:20 am</h2>
 </form>
 <br></br>
-<br></br>
 <div className="home-title2">
-<p id="homebase-title2"> Mobility Device Specifications </p>
+<p id="homebase-title2"> Mobility Device Specifications 
+</p>
+<img className="edit" src={image} alt="sample photo" />
 </div>
+<h1>Dimensions: </h1>    
+<br></br> 
+<h3>Length:</h3>  <h4>42 inches</h4> 
+<h3>Width:</h3>  <h4>23.25 inches</h4> 
+<h3>Height:</h3>  <h4>24 inches</h4> 
+<h3>Weight:</h3>  <h4>200 lbs</h4> 
+<hr></hr>
+    
+<h1>Battery Type:</h1>  <h4>non-spillable battery</h4>
+    <hr></hr>
+    <h1>Removable Parts:</h1>  <h4> Head Rest</h4>
+    <h1>{' '}</h1>  <h4> Seat Cushion</h4>
+    <h1>{' '}</h1>  <h4> Side Protectors</h4>
+    <br></br>  
+    <hr></hr>
+    <h1>Additional Information: </h1>   <h4> None</h4>
 
 </div>
 );
