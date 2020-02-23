@@ -11,12 +11,6 @@ class App extends Component {
     responseToPost: []
   };
 
-  // componentDidMount() {
-  //   // this.callApi()
-  //   //   .then(res => this.setState({ response: res.express }))
-  //   //   .catch(err => console.log(err));
-  // }
-
   handleSubmit = async e => {
     e.preventDefault();
     const response = await fetch(
