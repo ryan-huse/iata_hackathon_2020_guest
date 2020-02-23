@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import Checkpoint from './Checkpoint';
-import '../Css/Tracking.css';
-import image from '../Images/sample.png';
-import image2 from '../Images/Timeline.png';
+import React, { Component } from "react";
+import Checkpoint from "./Checkpoint";
+import "../Css/Tracking.css";
+import image from "../Images/sample.png";
+import image2 from "../Images/Timeline.png";
 
 const Tracking = () => (
   <div className="tracking">
     <div className="track-title">
-      <p id="tracking-title"> Tracking: 123456 </p>
+      <p id="tracking-title"> Tracking: 9006000001 </p>
     </div>
 
     <div className="timeline">
-          <a href="/checkpoint">
-            <img src={image2} alt="sample photo" />
-          </a>
-        </div>
+      <a href="/checkpoint">
+        <img src={image2} alt="sample photo" />
+      </a>
+    </div>
 
     <div className="main-details">
       <div className="tracking-point">
@@ -40,20 +40,19 @@ const Tracking = () => (
           <p>Timestamp: 1:20 PM</p>
         </div>
         <div className="photo">
-        <div className="photo">
-          <a href="/checkpoint">
-          <img src={image} alt="sample photo" />
-          </a>
-        </div>
+          <div className="photo">
+            <a href="/checkpoint">
+              <img src={image} alt="sample photo" />
+            </a>
+          </div>
         </div>
       </div>
       <hr></hr>
       <div className="tracking-point">
-       <h4> Arrived! Go to Baggage Claim 6.</h4>
+        <h4> Arrived! Go to Baggage Claim 6.</h4>
       </div>
     </div>
   </div>
-  
-)
+);
 
 export default Tracking;
