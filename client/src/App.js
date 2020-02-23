@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 
 import logo from "./logo.svg";
 
-import "./App.css";
+import "./Css/App.css";
 
 class App extends Component {
   state = {
@@ -61,7 +61,9 @@ class App extends Component {
 
         {this.state.responseToPost.map((element, index) => (
           <Fragment>
-            <p>{new Date(element.date).toLocaleString()}</p>
+            {console.log(element.data)}
+            <img src={`data:image/png;base64,${element.data}`}></img>
+            <p>{new Date(element.metadata.date).toLocaleString()}</p>
             <p>Airline: {element.metadata.airline}</p>
             <p>Airport: {element.metadata.airport}</p>
           </Fragment>
