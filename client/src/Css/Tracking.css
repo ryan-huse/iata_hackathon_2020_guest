@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.tracking { 
+.tracking {
   width: 100%;
   height: 80%;
 }
@@ -12,12 +12,12 @@
   display: flex;
   margin-left: 20px;
   padding: 20px;
-  color: #01416D;
+  color: #01416d;
 }
 
 .tracking hr {
   width: 60%;
-  border-top: 1px solid #B0D786;
+  border-top: 1px solid #b0d786;
   margin-left: 70px;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .track-title {
-  background-color: #01B1D7; 
+  background-color: #01b1d7;
 }
 
 .tracking p {
@@ -43,16 +43,18 @@
 }
 
 .tracking h4 {
-  color: #01416D;
+  color: #01416d;
 }
 
-.details, .photo {
-  display:inline;
+.details,
+.photo {
+  display: inline;
   /* vertical-align: middle; */
 }
 
-.main-details, .verticalLine {
-  display:inline;
+.main-details,
+.verticalLine {
+  display: inline;
 }
 
 .main-details {
@@ -75,7 +77,6 @@
   padding-top: 6%;
 }
 
-
-
-
-
+.gear img {
+  float: right;
+}
