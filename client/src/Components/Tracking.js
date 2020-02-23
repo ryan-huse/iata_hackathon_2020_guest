@@ -1,56 +1,82 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
+=======
+import React, { Component, Fragment } from "react";
+>>>>>>> 6828efe343809f47efc3efb0ce348aa9634f2ffd
 import Checkpoint from "./Checkpoint";
 import "../Css/Tracking.css";
 import image from "../Images/sample.png";
 import image2 from "../Images/Timeline.png";
 
-const Tracking = () => (
+export const Tracking = props => (
   <div className="tracking">
     <div className="track-title">
-      <p id="tracking-title"> Tracking: 9006000001 </p>
+      <p id="tracking-title"> Tracking: 90060000001 </p>
     </div>
 
-    <div className="timeline">
-      <a href="/checkpoint">
-        <img src={image2} alt="sample photo" />
-      </a>
-    </div>
+    {props.tracking[0] ? (
+      <div className="timeline">
+        <a href="/checkpoint">
+          <img src={image2} alt="sample photo" />
+        </a>
+      </div>
+    ) : null}
 
     <div className="main-details">
-      <div className="tracking-point">
-        <div className="details">
-          <h4>Atlanta airport</h4>
-          <p>Airline: Delta</p>
-          <p>Date: February 26, 2020</p>
-          <p>Timestamp: 10:00 AM</p>
+      {props.tracking.map(elements => {
+        var reversed = elements.sort().reverse();
+        return reversed.map((element, index) =>
+          element.metadata ? (
+            <Fragment>
+              <div className="tracking-point">
+                <div className="details">
+                  <h4>
+                    Airport:{" "}
+                    {element.metadata.airport
+                      ? element.metadata.airport
+                      : index == 0
+                      ? "SEA"
+                      : "ATL"}
+                  </h4>
+                  <p>Airline: {element.metadata.airline}</p>
+                  <p>
+                    Date:{" "}
+                    {new Date(element.metadata.date).toLocaleDateString(
+                      undefined,
+                      {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric"
+                      }
+                    )}
+                  </p>
+                  <p>
+                    Time:{" "}
+                    {new Date(element.metadata.date)
+                      .toLocaleTimeString()
+                      .replace(/:\d+ /, " ") +
+                      " " +
+                      new Date(element.metadata.date)
+                        .toLocaleTimeString("en-us", { timeZoneName: "short" })
+                        .split(" ")[2]}
+                  </p>
+                </div>
+                <div className="photo">
+                  <a href={`/checkpoint`}>
+                    <img src={`data:image/png;base64,${element.data}`}></img>
+                  </a>
+                </div>
+              </div>
+              <hr></hr>
+            </Fragment>
+          ) : null
+        );
+      })}
+      {props.tracking[0] ? (
+        <div className="tracking-point">
+          <h4> Arrived! Go to Baggage Claim 6.</h4>
         </div>
-        <div className="photo">
-          <a href="/checkpoint">
-            <img src={image} alt="sample photo" />
-          </a>
-        </div>
-      </div>
-
-      <hr></hr>
-      <div className="tracking-point">
-        <div className="details">
-          <h4>Seattle airport</h4>
-          <p>Airline: Delta</p>
-          <p>Date: February 26, 2020</p>
-          <p>Timestamp: 1:20 PM</p>
-        </div>
-        <div className="photo">
-          <div className="photo">
-            <a href="/checkpoint">
-              <img src={image} alt="sample photo" />
-            </a>
-          </div>
-        </div>
-      </div>
-      <hr></hr>
-      <div className="tracking-point">
-        <h4> Arrived! Go to Baggage Claim 6.</h4>
-      </div>
+      ) : null}
     </div>
   </div>
 );

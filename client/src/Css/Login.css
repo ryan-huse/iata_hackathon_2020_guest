@@ -1,4 +1,9 @@
-/*img {
+.login-top img {
+  width: 100%;
+  height: auto;
+}
+
+.login-bottom img {
   width: 100%;
   height: auto;
 }
@@ -7,4 +12,8 @@
   margin-bottom: 20px;
   margin-top: 10px;
   color: black;
+}
+
+.buttons a {
+  color: #01416d;
 }
